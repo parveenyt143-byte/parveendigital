@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn Affiliate Marketing with Parveen – A 22-year-old expert with 3 years of experience in affiliate marketing, Facebook Ads, and digital marketing. Start earning online today!" />
+  <meta name="keywords" content="affiliate marketing, online earning, digital marketing, Facebook Ads, lead generation, Parveen, affiliate trainer" />
+  <meta name="author" content="Parveen" />
+  <meta property="og:title" content="Parveen – Affiliate Marketing Expert | Learn & Earn Online" />
+  <meta property="og:description" content="Join 100+ clients guided by Parveen in affiliate marketing, Facebook Ads, and online earning. Get free consultation now!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://i.ibb.co/ZRFWfJ97/Whats-App-Image-2026-06-02-at-18-57-27.jpg" />
+  <title>Parveen – Affiliate Marketing Expert | Learn & Earn Online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #050d1a;
+      --deep: #091428;
+      --mid: #0d2040;
+      --blue: #1a3a6e;
+      --accent: #2d6fff;
+      --bright: #4d8fff;
+      --cyan: #00c8ff;
+      --white: #f0f6ff;
+      --muted: #7a9cc4;
+      --glass: rgba(13,32,64,0.55);
+      --glass-border: rgba(77,143,255,0.18);
+      --glow: rgba(45,111,255,0.35);
+      --font: 'Poppins', sans-serif;
+      --display: 'Syne', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--navy);
+      color: var(--white);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    /* Animated background mesh */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 15% 20%, rgba(45,111,255,0.13) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 85% 75%, rgba(0,200,255,0.08) 0%, transparent 55%),
+        radial-gradient(ellipse 40% 40% at 50% 50%, rgba(26,58,110,0.2) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--navy); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 0 5%;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(5,13,26,0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      transition: background 0.3s;
+    }
+    nav.scrolled { background: rgba(5,13,26,0.92); }
+
+    .nav-logo {
+      font-family: var(--display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 2px;
+      background: var(--accent);
+      transition: width 0.3s;
+      border-radius: 2px;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--accent), var(--bright));
+      color: #fff !important;
+      padding: 0.45rem 1.2rem;
+      border-radius: 50px;
+      font-weight: 600 !important;
+      transition: transform 0.2s, box-shadow 0.2s !important;
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px var(--glow); }
+    .nav-cta::after { display: none !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px; left: 0; right: 0;
+      background: rgba(5,13,26,0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 1.5rem 5%;
+      z-index: 999;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(77,143,255,0.08);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--white); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 100px 5% 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(45,111,255,0.15);
+      border: 1px solid rgba(45,111,255,0.3);
+      border-radius: 50px;
+      padding: 0.35rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--cyan);
+      letter-spacing: 0.5px;
+      margin-bottom: 1.5rem;
+      width: fit-content;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero-badge i { font-size: 0.75rem; }
+
+    .hero-title {
+      font-family: var(--display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+    .hero-title .gradient-text {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 2.2rem;
+      font-weight: 400;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: fadeUp 0.7s 0.3s ease both;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: #fff;
+      padding: 0.85rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.25s, box-shadow 0.25s;
+      box-shadow: 0 4px 18px rgba(37,211,102,0.3);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(37,211,102,0.4); }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: transparent;
+      color: var(--white);
+      padding: 0.85rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(10px);
+      transition: all 0.25s;
+    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); box-shadow: 0 6px 20px var(--glow); }
+
+    /* Hero image */
+    .hero-image-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      animation: fadeUp 0.9s 0.2s ease both;
+    }
+
+    .hero-image-bg {
+      position: absolute;
+      inset: -30px;
+      background: radial-gradient(ellipse, rgba(45,111,255,0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    .hero-image-ring {
+      position: absolute;
+      inset: -15px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(45,111,255,0.25);
+      animation: spin 12s linear infinite;
+    }
+    .hero-image-ring::before {
+      content: '';
+      position: absolute;
+      top: -4px; left: 50%;
+      transform: translateX(-50%);
+      width: 8px; height: 8px;
+      background: var(--cyan);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--cyan);
+    }
+
+    .hero-img {
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 3px solid rgba(45,111,255,0.4);
+      box-shadow: 0 0 60px rgba(45,111,255,0.25), 0 0 120px rgba(0,200,255,0.08);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-stats-float {
+      position: absolute;
+      bottom: 10px;
+      left: -30px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(16px);
+      border-radius: 16px;
+      padding: 1rem 1.4rem;
+      z-index: 2;
+    }
+    .hero-stats-float .stat-num {
+      font-family: var(--display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--cyan);
+      line-height: 1;
+    }
+    .hero-stats-float .stat-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .hero-exp-float {
+      position: absolute;
+      top: 20px;
+      right: -20px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(16px);
+      border-radius: 16px;
+      padding: 0.9rem 1.2rem;
+      z-index: 2;
+      text-align: center;
+    }
+    .hero-exp-float .exp-num {
+      font-family: var(--display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-exp-float .exp-label { font-size: 0.72rem; color: var(--muted); }
+
+    /* Orbit decoration */
+    .orbit {
+      position: absolute;
+      width: 450px; height: 450px;
+      border-radius: 50%;
+      border: 1px dashed rgba(45,111,255,0.12);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      animation: spin 20s linear infinite reverse;
+    }
+
+    /* ── SECTIONS COMMON ── */
+    section { position: relative; z-index: 1; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+
+    .section-pad { padding: 90px 0; }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 0.8rem;
+    }
+    .section-label::before {
+      content: '— ';
+      opacity: 0.5;
+    }
+
+    .section-title {
+      font-family: var(--display);
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 560px;
+    }
+
+    .section-head { margin-bottom: 3.5rem; }
+    .section-head.center { text-align: center; }
+    .section-head.center .section-desc { margin: 0 auto; }
+
+    /* Divider */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+      margin: 0 5%;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--deep); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-img-block {
+      position: relative;
+    }
+    .about-img-frame {
+      position: relative;
+      display: inline-block;
+    }
+    .about-img-frame::before {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border: 1px solid rgba(45,111,255,0.2);
+      border-radius: 24px;
+    }
+    .about-img-frame::after {
+      content: '';
+      position: absolute;
+      bottom: -20px; right: -20px;
+      width: 60%; height: 60%;
+      background: linear-gradient(135deg, var(--accent), var(--cyan));
+      opacity: 0.08;
+      border-radius: 16px;
+    }
+    .about-img {
+      width: 100%;
+      max-width: 420px;
+      height: 480px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 20px;
+      border: 1px solid var(--glass-border);
+      display: block;
+    }
+
+    .expertise-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(45,111,255,0.1);
+      border: 1px solid rgba(45,111,255,0.25);
+      border-radius: 50px;
+      padding: 0.4rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--bright);
+      transition: all 0.25s;
+    }
+    .chip:hover { background: rgba(45,111,255,0.2); transform: translateY(-2px); }
+
+    .about-info p {
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+      font-size: 0.97rem;
+    }
+
+    .info-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.8rem;
+    }
+    .info-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      padding: 1.2rem;
+      backdrop-filter: blur(10px);
+    }
+    .info-card .ic-num {
+      font-family: var(--display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .info-card .ic-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ── SERVICES ── */
+    #services { background: var(--navy); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+      transition: all 0.35s;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(45,111,255,0.4);
+      box-shadow: 0 20px 50px rgba(45,111,255,0.15);
+    }
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, rgba(45,111,255,0.2), rgba(0,200,255,0.1));
+      border: 1px solid rgba(45,111,255,0.25);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: var(--cyan);
+      margin-bottom: 1.4rem;
+      transition: transform 0.3s;
+    }
+    .service-card:hover .service-icon { transform: scale(1.1) rotate(5deg); }
+
+    .service-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+    }
+    .service-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+
+    /* ── WHY CHOOSE ── */
+    #why { background: var(--deep); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.2rem;
+    }
+
+    .why-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s;
+    }
+    .why-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(45,111,255,0.4);
+      box-shadow: 0 15px 40px rgba(45,111,255,0.12);
+    }
+
+    .why-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--accent), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .why-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .why-card p { font-size: 0.82rem; color: var(--muted); }
+
+    /* ── STATS ── */
+    #stats {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--mid) 100%);
+      border-top: 1px solid rgba(45,111,255,0.2);
+      border-bottom: 1px solid rgba(45,111,255,0.2);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item { padding: 1rem; }
+    .stat-number {
+      font-family: var(--display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff, var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+      display: block;
+    }
+    .stat-suffix {
+      font-family: var(--display);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      background: linear-gradient(135deg, var(--accent), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .stat-label-text {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 0.5rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: var(--navy); }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .testi-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 1.8rem;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s;
+    }
+    .testi-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(45,111,255,0.35);
+      box-shadow: 0 15px 40px rgba(45,111,255,0.1);
+    }
+
+    .testi-stars {
+      color: #ffc107;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    .testi-quote {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 1.4rem;
+      font-style: italic;
+    }
+    .testi-quote::before { content: '"'; color: var(--accent); font-size: 1.3rem; font-style: normal; }
+    .testi-quote::after { content: '"'; color: var(--accent); font-size: 1.3rem; font-style: normal; }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+    .testi-avatar {
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(45,111,255,0.3);
+    }
+    .testi-name { font-size: 0.9rem; font-weight: 700; }
+    .testi-role { font-size: 0.77rem; color: var(--muted); margin-top: 2px; }
+
+    /* ── FAQ ── */
+    #faq { background: var(--deep); }
+
+    .faq-list { max-width: 800px; margin: 0 auto; }
+
+    .faq-item {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      margin-bottom: 1rem;
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .faq-item.active { border-color: rgba(45,111,255,0.4); }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: left;
+      padding: 1.3rem 1.6rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      transition: color 0.2s;
+    }
+    .faq-item.active .faq-question { color: var(--accent); }
+
+    .faq-icon {
+      min-width: 28px; height: 28px;
+      background: rgba(45,111,255,0.12);
+      border: 1px solid rgba(45,111,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: var(--accent);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .faq-item.active .faq-icon { transform: rotate(45deg); background: rgba(45,111,255,0.25); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+    }
+    .faq-answer-inner {
+      padding: 0 1.6rem 1.4rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .faq-item.active .faq-answer { max-height: 200px; }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--navy); }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .contact-info h3 {
+      font-family: var(--display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+    }
+    .contact-info p { color: var(--muted); font-size: 0.97rem; margin-bottom: 2rem; }
+
+    .contact-details { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .cd-icon {
+      width: 44px; height: 44px;
+      background: rgba(45,111,255,0.12);
+      border: 1px solid rgba(45,111,255,0.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .cd-label { font-size: 0.75rem; color: var(--muted); }
+    .cd-value { font-size: 0.95rem; font-weight: 600; }
+
+    .contact-cta-box {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      backdrop-filter: blur(16px);
+      text-align: center;
+    }
+    .contact-cta-box .cta-icon {
+      font-size: 3rem;
+      color: #25d366;
+      margin-bottom: 1rem;
+    }
+    .contact-cta-box h4 {
+      font-family: var(--display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 0.7rem;
+    }
+    .contact-cta-box p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+    }
+
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: #fff;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: 0 6px 25px rgba(37,211,102,0.35);
+    }
+    .btn-wa:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(37,211,102,0.45); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--deep);
+      border-top: 1px solid var(--glass-border);
+      padding: 3rem 5%;
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: var(--display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.7rem;
+    }
+    .footer-tagline { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.8rem; }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .social-link {
+      width: 40px; height: 40px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.25s;
+    }
+    .social-link:hover { background: rgba(45,111,255,0.2); border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+    .footer-copy { font-size: 0.82rem; color: var(--muted); }
+    .footer-copy span { color: var(--accent); font-weight: 600; }
+
+    /* ── FLOATING WA BUTTON ── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      z-index: 999;
+      width: 60px; height: 60px;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 6px 25px rgba(37,211,102,0.45);
+      animation: waFloat 2.5s ease-in-out infinite;
+    }
+    .wa-float::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 2px solid rgba(37,211,102,0.3);
+      animation: waRing 2s ease-out infinite;
+    }
+    .wa-float:hover { transform: scale(1.1); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+    @keyframes spin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    @keyframes waFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes waRing {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 992px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
+      .hero-sub { margin: 0 auto 2rem; }
+      .hero-buttons { justify-content: center; }
+      .hero-image-wrap { order: -1; }
+      .hero-img { width: 280px; height: 280px; }
+      .hero-stats-float { left: 0; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img-frame { display: block; }
+      .about-img { max-width: 100%; height: 340px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(3, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .testi-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-wrap { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    @media (max-width: 640px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .testi-grid { grid-template-columns: 1fr; }
+      .info-cards { grid-template-columns: 1fr 1fr; }
+      .hero-img { width: 240px; height: 240px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">Parveen</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Me</a></li>
+    <li><a href="#stats">Stats</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="https://wa.me/919671723955" target="_blank" class="nav-cta"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#why" onclick="closeMobile()">Why Me</a>
+  <a href="#stats" onclick="closeMobile()">Stats</a>
+  <a href="#testimonials" onclick="closeMobile()">Reviews</a>
+  <a href="#faq" onclick="closeMobile()">FAQ</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+  <a href="https://wa.me/919671723955" target="_blank" style="color:#25d366;font-weight:700;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fas fa-star"></i> Top Affiliate Marketing Expert</div>
+      <h1 class="hero-title">
+        Learn Affiliate Marketing &<br />
+        <span class="gradient-text">Start Earning Online</span>
+      </h1>
+      <p class="hero-sub">Hi, I'm Parveen. A 22-year-old Affiliate Marketer with 3 years of experience helping people learn online earning and digital marketing.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/919671723955" target="_blank" class="btn-primary">
+          <i class="fab fa-whatsapp"></i> Contact on WhatsApp
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <i class="fas fa-phone-alt"></i> Get Free Consultation
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <div class="orbit"></div>
+      <div class="hero-image-bg"></div>
+      <div class="hero-image-ring"></div>
+      <img src="https://i.ibb.co/ZRFWfJ97/Whats-App-Image-2026-06-02-at-18-57-27.jpg" alt="Parveen – Affiliate Marketing Expert" class="hero-img" />
+      <div class="hero-stats-float">
+        <div class="stat-num">100+</div>
+        <div class="stat-label">Clients Guided</div>
+      </div>
+      <div class="hero-exp-float">
+        <div class="exp-num">3 Yrs</div>
+        <div class="exp-label">Experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-block reveal">
+        <div class="about-img-frame">
+          <img src="https://i.ibb.co/ZRFWfJ97/Whats-App-Image-2026-06-02-at-18-57-27.jpg" alt="Parveen – Digital Marketing Trainer" class="about-img" />
+        </div>
+        <div class="expertise-chips" style="margin-top:2rem;">
+          <span class="chip"><i class="fas fa-link"></i> Affiliate Marketing</span>
+          <span class="chip"><i class="fab fa-facebook"></i> Facebook Ads</span>
+          <span class="chip"><i class="fas fa-users"></i> Lead Generation</span>
+          <span class="chip"><i class="fas fa-bullhorn"></i> Digital Marketing</span>
+        </div>
+      </div>
+      <div class="about-info reveal reveal-delay-2">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">3 Years of Proven <span style="background:linear-gradient(135deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Digital Expertise</span></h2>
+        <p>I'm Parveen, a passionate affiliate marketer and digital marketing trainer from India. At just 22, I've spent 3 dedicated years mastering the art of online earning — running high-converting campaigns, setting up Facebook Ads, and generating quality leads for businesses.</p>
+        <p>My mission is simple: <strong>help beginners and struggling marketers build real, sustainable income online</strong> — without wasting time or money on strategies that don't work.</p>
+        <p>Whether you're just starting out or want to scale your existing campaigns, I provide personalized, practical guidance tailored to your goals.</p>
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="ic-num">22</div>
+            <div class="ic-label">Age (Years)</div>
+          </div>
+          <div class="info-card">
+            <div class="ic-num">3+</div>
+            <div class="ic-label">Years Experience</div>
+          </div>
+          <div class="info-card">
+            <div class="ic-num">100+</div>
+            <div class="ic-label">Clients Guided</div>
+          </div>
+          <div class="info-card">
+            <div class="ic-num">500+</div>
+            <div class="ic-label">Campaigns Managed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<section id="services" class="section-pad">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="section-label">What I Offer</div>
+      <h2 class="section-title">Premium <span style="background:linear-gradient(135deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Services</span></h2>
+      <p class="section-desc">Everything you need to build a profitable online presence — from strategy to execution.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon"><i class="fas fa-link"></i></div>
+        <h3>Affiliate Marketing Training</h3>
+        <p>Complete A-Z affiliate marketing course with live guidance. Learn to pick niches, promote products, and earn consistent commissions every month.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon"><i class="fab fa-facebook-f"></i></div>
+        <h3>Facebook Ads Setup</h3>
+        <p>Expert-level Facebook & Instagram ad campaigns setup. Targeting, creatives, pixel setup, retargeting — I handle everything for maximum ROI.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon"><i class="fas fa-magnet"></i></div>
+        <h3>Lead Generation</h3>
+        <p>High-quality lead generation strategies for businesses. Fill your pipeline with qualified leads that convert into real customers and sales.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon"><i class="fas fa-desktop"></i></div>
+        <h3>Landing Page Creation</h3>
+        <p>High-converting landing pages built for results. Clean design, fast loading, persuasive copy, and optimized for maximum conversion rates.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Digital Marketing Consulting</h3>
+        <p>One-on-one digital marketing consultation. I analyze your current strategy, identify gaps, and create a custom roadmap for your growth.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon"><i class="fas fa-rupee-sign"></i></div>
+        <h3>Online Earning Guidance</h3>
+        <p>Learn genuine, proven methods to earn money online. From affiliate marketing to freelancing — I guide you step by step to real results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHY CHOOSE ME -->
+<section id="why" class="section-pad">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="section-label">Why Choose Me</div>
+      <h2 class="section-title">What Makes Me <span style="background:linear-gradient(135deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Different</span></h2>
+      <p class="section-desc">I don't just teach theory — I share real strategies that I use every single day to generate results.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon"><i class="fas fa-medal"></i></div>
+        <h4>3 Years Experience</h4>
+        <p>Battle-tested strategies from 3 years in the affiliate marketing trenches.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon"><i class="fas fa-headset"></i></div>
+        <h4>Personal Support</h4>
+        <p>Direct access to me via WhatsApp for all your questions and guidance.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon"><i class="fas fa-hands-helping"></i></div>
+        <h4>Practical Learning</h4>
+        <p>100% practical, action-based training — no boring theory or fluff.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-4">
+        <div class="why-icon"><i class="fas fa-trophy"></i></div>
+        <h4>Proven Strategies</h4>
+        <p>Only strategies that have been tested and proven to generate real income.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-5">
+        <div class="why-icon"><i class="fas fa-seedling"></i></div>
+        <h4>Beginner Friendly</h4>
+        <p>No experience needed. I guide you from absolute zero to earning online.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- STATS -->
+<section id="stats" class="section-pad">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal reveal-delay-1">
+        <span class="stat-number" data-target="3" data-suffix="+">0</span>
+        <p class="stat-label-text">Years of Experience</p>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <span class="stat-number" data-target="100" data-suffix="+">0</span>
+        <p class="stat-label-text">Clients Guided</p>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <span class="stat-number" data-target="500" data-suffix="+">0</span>
+        <p class="stat-label-text">Campaigns Managed</p>
+      </div>
+      <div class="stat-item reveal reveal-delay-4">
+        <span class="stat-number" data-target="24" data-suffix="/7">0</span>
+        <p class="stat-label-text">Support Available</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section-pad">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="section-label">Testimonials</div>
+      <h2 class="section-title">What Clients <span style="background:linear-gradient(135deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Say</span></h2>
+      <p class="section-desc">Real results from real people who trusted me with their online earning journey.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">Parveen completely changed how I think about online earning. His affiliate marketing training was so practical — within 2 months I made my first commission. Highly recommended!</p>
+        <div class="testi-author">
+          <img src="https://i.pravatar.cc/100?img=12" alt="Rahul Sharma" class="testi-avatar" />
+          <div>
+            <div class="testi-name">Rahul Sharma</div>
+            <div class="testi-role">Affiliate Marketer, Delhi</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">The Facebook Ads setup Parveen did for my business brought in leads like never before. Our cost per lead dropped by 60%. Absolute game changer for my business!</p>
+        <div class="testi-author">
+          <img src="https://i.pravatar.cc/100?img=25" alt="Priya Verma" class="testi-avatar" />
+          <div>
+            <div class="testi-name">Priya Verma</div>
+            <div class="testi-role">Small Business Owner, Mumbai</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-3">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">I was completely new to digital marketing. Parveen's step-by-step guidance made everything crystal clear. Now I'm earning ₹30,000+ per month from affiliate marketing!</p>
+        <div class="testi-author">
+          <img src="https://i.pravatar.cc/100?img=33" alt="Amit Kumar" class="testi-avatar" />
+          <div>
+            <div class="testi-name">Amit Kumar</div>
+            <div class="testi-role">Freelancer, Jaipur</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-1">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">The landing page Parveen created for my coaching business is stunning AND converts like crazy. My lead-to-sale rate improved dramatically. Worth every penny!</p>
+        <div class="testi-author">
+          <img src="https://i.pravatar.cc/100?img=47" alt="Sneha Patel" class="testi-avatar" />
+          <div>
+            <div class="testi-name">Sneha Patel</div>
+            <div class="testi-role">Online Coach, Ahmedabad</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-2">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">Parveen's personal support sets him apart. Anytime I'm stuck, he's just a WhatsApp message away. His lead generation strategies have completely transformed my real estate business.</p>
+        <div class="testi-author">
+          <img src="https://i.pravatar.cc/100?img=52" alt="Vikram Singh" class="testi-avatar" />
+          <div>
+            <div class="testi-name">Vikram Singh</div>
+            <div class="testi-role">Real Estate Agent, Gurgaon</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal reveal-delay-3">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">As a college student, I was skeptical about online earning. Parveen proved it's possible even with no experience. I'm now earning a decent side income while studying. Thank you!</p>
+        <div class="testi-author">
+          <img src="https://i.pravatar.cc/100?img=60" alt="Neha Gupta" class="testi-avatar" />
+          <div>
+            <div class="testi-name">Neha Gupta</div>
+            <div class="testi-role">Student, Chandigarh</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<section id="faq" class="section-pad">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Frequently Asked <span style="background:linear-gradient(135deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Questions</span></h2>
+      <p class="section-desc">Got questions? I've got answers. Here are the most common ones I receive.</p>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What is affiliate marketing and how does it work?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Affiliate marketing is a performance-based online business model where you earn a commission by promoting other companies' products or services. You share a unique link, and when someone makes a purchase through your link, you earn a percentage of the sale — without holding any inventory or dealing with customer service. It's one of the most beginner-friendly ways to earn money online.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How much money can I realistically earn from affiliate marketing?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Earnings vary based on your effort, niche, and consistency. Beginners typically earn ₹5,000–₹20,000/month in their first few months. With 6–12 months of consistent work and the right strategies, earning ₹50,000–₹1,00,000+ per month is very realistic. My students have achieved this and more. The key is to follow a proven system and stay consistent.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Do I need any prior experience or technical skills to start?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Absolutely not! My training is specifically designed for beginners with zero experience. All you need is a smartphone or laptop, an internet connection, and the willingness to learn and take action. I'll teach you everything from scratch — from setting up accounts to running profitable campaigns — in simple, easy-to-follow steps.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What is the investment required to get started with affiliate marketing?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            You can start affiliate marketing with very minimal investment — sometimes even for free. While some tools and paid traffic (like Facebook Ads) can accelerate your results, I also teach free traffic methods that work perfectly for beginners. During our consultation, I'll help you figure out the best strategy based on your budget so you can start without financial stress.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          How do I get started and what support will I receive?
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Getting started is simple — just reach out to me on WhatsApp at <strong>9671723955</strong> for a free consultation. I'll understand your goals and guide you to the right program. Once you join, you get personalized one-on-one training, a step-by-step action plan, and direct access to me 24/7 via WhatsApp for all your queries and support throughout your journey.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-info reveal">
+        <div class="section-label">Contact</div>
+        <h2 class="section-title">Ready to <span style="background:linear-gradient(135deg,var(--accent),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Start?</span></h2>
+        <p>Don't wait another day. Reach out for your FREE consultation and let's build your online income together. I personally respond to every message.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="cd-icon"><i class="fas fa-user"></i></div>
+            <div>
+              <div class="cd-label">Name</div>
+              <div class="cd-value">Parveen</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <div class="cd-label">Phone / WhatsApp</div>
+              <div class="cd-value">+91 9671723955</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <div class="cd-label">WhatsApp Link</div>
+              <div class="cd-value">wa.me/919671723955</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <div class="cd-label">Response Time</div>
+              <div class="cd-value">Within 1 Hour</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-cta-box reveal reveal-delay-2">
+        <div class="cta-icon"><i class="fab fa-whatsapp"></i></div>
+        <h4>Chat with Parveen</h4>
+        <p>Click the button below to instantly connect with me on WhatsApp. Let's discuss your goals and kickstart your online earning journey today!</p>
+        <a href="https://wa.me/919671723955?text=Hi%20Parveen!%20I%20want%20to%20learn%20affiliate%20marketing%20and%20start%20earning%20online.%20Please%20guide%20me!" target="_blank" class="btn-wa">
+          <i class="fab fa-whatsapp"></i> Message on WhatsApp
+        </a>
+        <p style="margin-top:1.2rem;margin-bottom:0;font-size:0.78rem;color:var(--muted);">Free consultation · No commitment required</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Parveen</div>
+  <p class="footer-tagline">Affiliate Marketing Expert · Digital Marketing Trainer · Online Earning Coach</p>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#why">Why Me</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://wa.me/919671723955" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+    <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+  </div>
+  <p class="footer-copy">Copyright &copy; 2026 <span>Parveen Affiliate Marketing</span>. All Rights Reserved.</p>
+</footer>
+
+<!-- FLOATING WA BUTTON -->
+<a href="https://wa.me/919671723955" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  // ── NAVBAR ──
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // ── HAMBURGER ──
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  function closeMobile() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }
+
+  // ── SCROLL REVEAL ──
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+
+  // ── ANIMATED COUNTERS ──
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = Math.floor(current) + suffix;
+    }, 16);
+  }
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCounter(e.target);
+        counterObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.stat-number[data-target]').forEach(el => counterObserver.observe(el));
+
+  // ── FAQ ACCORDION ──
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      if (!isActive) item.classList.add('active');
+      btn.setAttribute('aria-expanded', !isActive);
+    });
+  });
+
+  // ── SMOOTH SCROLL ──
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
